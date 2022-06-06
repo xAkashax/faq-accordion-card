@@ -1,0 +1,147 @@
+
+:root {
+  --fz: 12px;
+  --fw-400: 400;
+  --fw-700: 700;
+  --fontStyle: 'Kumbh Sans', sans-serif;
+  --veryDarkDesaturatedBlue: hsl(238, 29%, 16%);
+  --softRed: hsl(14, 88%, 65%);
+  --softViolet: hsl(273, 75%, 66%);
+  --softBlue: hsl(240, 73%, 65%);
+  --veryDarkGrayishBlue: hsl(237, 12%, 33%);
+  --darkGrayishBlue: hsl(240, 6%, 50%);
+  --lightGrayishBlue: hsl(240, 5%, 91%); 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--fontStyle);
+  font-size: var(--fz);
+  font-weight: var(--fw-400);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(var(--softViolet),var(--softBlue));
+}
+
+main {
+  width: 375px;
+  min-height: 100vh;
+  margin: 120px auto 0;
+  padding: 0 8px;
+}
+
+.illustration {
+  position: relative;
+  top: -10px;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 1;
+}
+
+.img-one {
+  width: 65%;
+  display: block;
+  position: fixed;
+  top: -95px;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 1;
+}
+
+img.img-two {
+  width: 65%;
+  display: block;
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.card {
+  height: 80vh;
+  margin: 0 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: var(--lightGrayishBlue);
+  border-radius: 30px;
+  position: relative;
+}
+
+.faq {
+  width: 95%;
+  /* border: 1px solid black; */
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.card h1 {
+  text-align: center;
+  font-weight: var(--fw-700);
+  color: var(--veryDarkDesaturatedBlue);
+  margin: 80px 0 0;
+  padding-top: 20px;
+  font-size: 30px;
+}
+
+.card details {
+  width: 90%;
+  padding: 10px 0;
+}
+
+summary h3 {
+  color: var(--darkGrayishBlue);
+  font-weight: var(--fw-700);
+}
+
+summary h3:hover {
+  color: var(--softRed);
+}
+
+details summary { 
+  cursor: pointer;
+  list-style: none
+}
+
+details summary > * {
+  display: inline;
+}
+summary::-webkit-details-marker {
+  display: none; }
+
+details summary::after { 
+  content: url(images/icon-arrow-down.svg);
+  display: inline-block;
+  transition: 0.2s;
+}
+
+details[open] summary::after { 
+  content: url(images/icon-arrow-down.svg); 
+  transform: rotate(-180deg)
+}
+
+.card hr {
+  border-color: hsla(240, 4%, 91%, 0.431);
+  margin: 5px 0;
+  width: 100%;
+}
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }

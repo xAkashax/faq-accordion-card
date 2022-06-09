@@ -1,0 +1,254 @@
+
+:root {
+  --fz: 12px;
+  --fw-400: 400;
+  --fw-700: 700;
+  --fontStyle: 'Kumbh Sans', sans-serif;
+  --veryDarkDesaturatedBlue: hsl(238, 29%, 16%);
+  --softRed: hsl(14, 88%, 65%);
+  --softViolet: hsl(273, 75%, 66%);
+  --softBlue: hsl(240, 73%, 65%);
+  --veryDarkGrayishBlue: hsl(237, 12%, 33%);
+  --darkGrayishBlue: hsl(240, 6%, 50%);
+  --lightGrayishBlue: hsl(240, 5%, 91%); 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--fontStyle);
+  font-size: var(--fz);
+  font-weight: var(--fw-400);
+  background-image: linear-gradient(var(--softViolet),var(--softBlue));
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+main {
+  width: 375px;
+  margin: auto 0;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.illustration-mobile {
+  position: relative;
+  top: -10px;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 1;
+}
+
+.illustration-dekstop {
+  display: none;
+}
+
+.img-one {
+  width: 80%;
+  display: block;
+  position: absolute;
+  top: -115px;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 1;
+}
+
+img.img-two {
+  width: 80%;
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  flex-grow: 1; 
+  justify-content: flex-start;
+  margin: 50px 5px 0;
+  padding: 20px 20px;
+  background-color: var(--lightGrayishBlue);
+  border-radius: 30px;
+  position: relative;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.4);
+}
+
+.card.faq {
+  width: 95%;
+  /* border: 1px solid black; */
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.card h1 {
+  text-align: center;
+  font-weight: var(--fw-700);
+  color: var(--veryDarkDesaturatedBlue);
+  margin: 80px 0 20px;
+  padding-top: 30px;
+  font-size: 30px;
+}
+
+.card details {
+  width: 100%;
+  padding: 15px 0;
+}
+
+summary h3 {
+  color: var(--veryDarkGrayishBlue);
+  font-weight: var(--fw-400);
+}
+
+.bold {
+  font-weight: var(--fw-700);
+}
+
+summary h3:hover {
+  color: var(--softRed);
+}
+
+details summary { 
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+}
+
+details summary > * {
+  display: inline;
+}
+summary::-webkit-details-marker {
+  display: none; }
+
+details summary::after { 
+  content: url(images/icon-arrow-down.svg);
+  display: inline-block;
+  transition: 0.2s;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+details[open] summary::after { 
+  content: url(images/icon-arrow-down.svg); 
+  transform: rotate(-180deg);
+}
+
+summary ~ p {
+  color: var(--darkGrayishBlue);
+  padding-top: 10px;
+  padding-right: 50px;
+  line-height: 1.8;
+}
+
+.card hr {
+  border-color: hsla(240, 4%, 91%, 0.431);
+  margin: 5px 0;
+  width: 100%;
+}
+
+.card hr:last-child {
+  margin-bottom: 40px;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+/* @media only screen and (min-width: 320px) { 
+  body {
+    height: 120vh;
+  }
+} */
+
+@media only screen and (min-width : 1020px) {
+ 
+  main {
+    width: 900px;
+    margin: auto 0;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .card {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 20px 20px;
+  }
+
+  .illustration-mobile {
+    display: none;
+  }
+
+  .illustration-dekstop {
+    display: block;
+  }
+
+  .img-box {
+    width: 20%;
+    position: absolute;
+    top: 190px;
+    left: -85px;
+    z-index: 2;
+  }
+
+  .img-one-deskt {
+    width: 48%;
+    position: absolute;
+    top: 77px;
+    left: -65px;
+    z-index: 1;
+    
+    }
+
+  .img-two-deskt {
+    width: 98%;
+    position: absolute;
+    top: -257px;
+    left: -503px;
+  }
+
+ 
+  
+  .faq {
+    flex-basis: 50%;
+  }
+
+  .card h1 {
+    text-align: left;
+    margin: 20px 0;
+  }
+  
+  .card details {
+    width: 85%;
+    padding: 12px 0;
+  }
+  
+  .card hr {
+    width: 87%;
+  }
+  
+  .card hr:last-child {
+    margin-bottom: 60px;
+  }
+  
+}

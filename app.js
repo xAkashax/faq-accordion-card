@@ -1,7 +1,15 @@
-const links = document.querySelectorAll('h3');
+const links = document.querySelectorAll('summary');
+const box = document.querySelector('.img-box');
 
 for (let i = 0; i < links.length; i++ ) {
   links[i].addEventListener('click', function(){
-    this.classList.toggle('bold');
+    this.querySelector('h3').classList.toggle('bold');
   });
+  links[i].addEventListener('mouseover', function(){
+    box.style.transform = "translateX(-35px)";
+  });
+  links[i].addEventListener('mouseout', function(){
+    box.style.transform = "translateX(0)";
+});
 }
+

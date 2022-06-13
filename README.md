@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [FrontendMentor]([https://www.frontendmentor.io/solutions/faq-accordion-card-kpNJeNnH7l])
-- Live Site URL: [Demo]([https://comfy-conkies-bf1a51.netlify.app])
+- Solution URL: [FrontendMentor](https://www.frontendmentor.io/solutions/faq-accordion-card-kpNJeNnH7l)
+- Live Site URL: [Demo](https://comfy-conkies-bf1a51.netlify.app)
 
 ## My process
 
